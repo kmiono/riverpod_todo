@@ -57,7 +57,7 @@ class _AddTodoDialogState extends ConsumerState<AddTodoDialog> {
           onPressed: () {
             if (_formKey.currentState!.validate()) {
               ref
-                  .read(TodoNotifierProvider.notifier)
+                  .read(todoNotifierProvider.notifier)
                   .addTodo(_titleController.text, _descriptionController.text);
               Navigator.pop(context);
             }

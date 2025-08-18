@@ -44,8 +44,8 @@ class TodoNotifier extends _$TodoNotifier {
 }
 
 @riverpod
-List<Todo> filterTodos(FiltertodosRef ref, String filter) {
-  final todos = ref.watch(TodoNotifierProvider);
+List<Todo> filterTodos(FilterTodosRef ref, String filter) {
+  final todos = ref.watch(todoNotifierProvider);
 
   switch (filter) {
     case 'completed':
